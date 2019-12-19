@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">OasisVerde</string>
+    <string name="cat_logo">Catálogo</string>
+    <string name="inicio">Inicio</string>
+    <string name="tiendas">Tiendas</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="contacto">Contacto</string>
+    <string name="buscar">Buscar</string>
+    <string name="menu">Menu</string>
+    <string name="consejo">Consejo</string>
+    <string name="planta">Planta</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="guardar">Guardar</string>
+    <string name="togglebutton">ToggleButton</string>
+</resources>
