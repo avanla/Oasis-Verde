@@ -38,7 +38,6 @@ public class PlantaActivity extends AppCompatActivity {
         this.txtDescripcion = (TextView) findViewById(R.id.txtDescripcion);
         this.imageView = (ImageView) findViewById(R.id.imageView);
         this.imageButton = (ImageButton) findViewById(R.id.imageButton);
-        this.toggleButton = (ToggleButton) findViewById(R.id.tglFav);
 
         this.plantaDAL = new PlantaDAL(getApplicationContext(), (Planta) getIntent().getSerializableExtra("planta") );
 
@@ -46,7 +45,7 @@ public class PlantaActivity extends AppCompatActivity {
         this.txtNombreTipico.setText(plantaDAL.getPlanta().getNombreTipico());
         this.txtDescripcion.setText(plantaDAL.getPlanta().getDescripcion());
 
-        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        /*toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
@@ -60,6 +59,6 @@ public class PlantaActivity extends AppCompatActivity {
                             "Planta eliminada de favoritos", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
     }
 }

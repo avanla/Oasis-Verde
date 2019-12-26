@@ -59,4 +59,6 @@ public class Favorito implements Serializable {
     public  String toString(){
         return (this.getNombre() +" || "+this.getNombreTipico()+" || "+this.getDescripcion());
     }
+
+
 }

@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView imageView;
     private Button btnCat;
     private Button btnFav;
+    private Button btnContacto;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         this.btnCat = findViewById(R.id.btnCatalogo);
         this.btnFav = findViewById(R.id.btnFavoritos);
         this.imageView = (ImageView) findViewById(R.id.imageView);
+        this.btnContacto = (Button) findViewById(R.id.btnContacto);
 
         btnCat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -35,6 +37,19 @@ public class MainActivity extends AppCompatActivity {
                 abrirFavoritos();
             }
         });
+        btnFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirFavoritos();
+            }
+        });
+        btnContacto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                abrirContacto();
+            }
+        });
+
 
     }
     private void abrirCatalogo() {
@@ -43,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
     }
     private void abrirFavoritos() {
         Intent intento = new Intent(MainActivity.this, FavoritoActivity.class);
+        startActivityForResult(intento, 100);
+    }
+    private void abrirContacto() {
+        Intent intento = new Intent(MainActivity.this, ContactoActivity.class);
         startActivityForResult(intento, 100);
     }
 }
